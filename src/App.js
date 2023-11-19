@@ -4,11 +4,9 @@ import EndPage from './pages/EndPage';
 import React, { useState} from 'react';
 import './App.css';
 
-function App() {
+function App({words}) {
   const [text, setText] = useState(false);
   const [end, setEnd] = useState(false);
-
-  let words = ['hi', 'my', 'name', 'is'];
 
 
   if (text) {
