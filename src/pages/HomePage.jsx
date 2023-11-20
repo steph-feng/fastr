@@ -11,7 +11,7 @@ function HomePage({
     return (
         <div>
             <p>hello</p>
-            <button onClick={handleButtonClick}></button>
+            <button onClick={handleButtonClick}>Start Reading</button>
         </div>
     )
 }

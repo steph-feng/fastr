@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let words = ['hi', 'my', 'name', 'is'];
+let words = ['hi', 'my', 'name', 'is', 'fastr', "i\'m", 'an', 'app'];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
