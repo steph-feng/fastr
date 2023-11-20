@@ -1,4 +1,4 @@
-.app {
+.container {
     text-align: center;
     padding: 20px;
     display: flex;
@@ -10,20 +10,40 @@
     background-color: #e6fded;
   }
 
-  .start-button {
-    border-radius: 30px;
+  .button {
+    border-radius: 20px;
     padding: 20px;
-    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
     font-family: Gill Sans, sans-serif;
     font-weight: bold;
     background-color: #40bfea;
     color: white;
     border: none;
-    margin: 2%;
   }
   
-  .start-button:hover {
+  .button:hover {
     background-color: rgb(41, 117, 180);
     transition: color 1s, background-color 0.5s;
   
+  }
+
+  .single-word {
+    margin: 20px;
+    font-size: 38px;
+    font-family: "Gill Sans", "sans-serif";
+    color:black;
+  }
+
+  .instructions {
+    font-family: "Gill Sans", "sans-serif";
+    font-size: 20px;
+    color: rgb(41, 117, 180);
+  }
+
+  .h2 {
+    color: #63a776;
+    margin: 20px;
+    font-size: 24px;
+    font-family: "Gill Sans", "sans-serif";
   }

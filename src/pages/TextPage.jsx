@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Slider from '@mui/material/Slider';
 import "./TextPage.css";
 
 function TextPage({
@@ -45,24 +46,26 @@ function TextPage({
         let totalTime = timeElapsed;
         totalTime = totalTime / 1000;
         return (
-            <div className='app'>
-                <p>You read {words.length} words in {totalTime} seconds!</p>
-                <p>To reread this paragraph, click below!</p>
-                <button className='start-button' onClick={handleButtonClick}>Reread</button>
-                <p>To read new text, highlight new text on the webpage!</p>
+            <div className='container'>
+                <h2 className='h2'>you read {words.length} words in {totalTime} seconds!</h2>
+                <p className='instructions'>to reread this paragraph, click below!</p>
+                <button className='button' onClick={handleButtonClick}>reread</button>
+                <p className='instructions'>to read different text, highlight new text on the webpage</p>
             </div> 
         )
     }
     return (
-        <div className='app'>
-            <p>{displayWord}</p>
-            <p>Adjust speed below!</p>
-            <input
-                type='range'
-                min="1000"
-                max="2000"
-                value={2000 - intervalDuration}
+        <div className='container'>
+            <h2 className='single-word'>{displayWord}</h2>
+            <p className='instructions'>adjust speed here</p>
+            <Slider
+                min={1000}
+                max={2000}
+                defaultValue={2000 - intervalDuration}
                 onChange={handleIntervalChange}
+                sx={{
+                    width: "50%",
+                  }}
             />
         </div>
     )

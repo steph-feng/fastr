@@ -9,11 +9,12 @@ function HomePage({
         setText(true);
     }
 
+    let result = words.join(' ');
     return (
         <div className='app'>
-            <h1>Welcome to Fastr</h1>
-            <h2>Click the button to read faster!</h2>
-            <div className="info-box">{words}</div>
+            <h1>welcome to fastR</h1>
+            <h2>your highlighted text:</h2>
+            <div className="info-box">{result}</div>
             <button className='start-button' onClick={handleButtonClick}>Start Reading</button>
         </div>
     )
