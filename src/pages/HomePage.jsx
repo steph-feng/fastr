@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.css';
 
 function HomePage({
     words,
@@ -9,9 +10,11 @@ function HomePage({
     }
 
     return (
-        <div>
-            <p>hello</p>
-            <button onClick={handleButtonClick}>Start Reading</button>
+        <div className='app'>
+            <h1>Welcome to Fastr</h1>
+            <h2>Click the button to read faster!</h2>
+            <div className="info-box">{words}</div>
+            <button className='start-button' onClick={handleButtonClick}>Start Reading</button>
         </div>
     )
 }

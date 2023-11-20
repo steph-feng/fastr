@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./TextPage.css";
 
 function TextPage({
     words
@@ -44,17 +45,17 @@ function TextPage({
         let totalTime = timeElapsed;
         totalTime = totalTime / 1000;
         return (
-            <div>
+            <div className='app'>
                 <p>You read {words.length} words in {totalTime} seconds!</p>
                 <p>To reread this paragraph, click below!</p>
-                <button onClick={handleButtonClick}>Reread</button>
+                <button className='start-button' onClick={handleButtonClick}>Reread</button>
                 <p>To read new text, highlight new text on the webpage!</p>
             </div> 
         )
     }
     return (
-        <div>
-            <p style={word}>{displayWord}</p>
+        <div className='app'>
+            <p>{displayWord}</p>
             <p>Adjust speed below!</p>
             <input
                 type='range'
@@ -68,12 +69,3 @@ function TextPage({
 }
 
 export default TextPage;
-
-const button = {
-    height: "200px",
-    width: "200px",
-};
-
-const word = {
-    fontSize: 20,
-};
