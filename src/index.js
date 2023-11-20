@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let words = ['Hi,', 'my', 'name', 'is', 'fastR!', "I'm", 'an', 'app.'];
+let s = "A hackathon is, as others have said, an often competitive event where teams of hackers of the kind you see on Hackaday get together to build something cool in a limited time, usually with some kind of theme. For example, smartphone app hackathons, wearable electronics hackathons, big data hackathons, California water crisis solutions hackathons, etc.";
+let words = s.split(" ");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
