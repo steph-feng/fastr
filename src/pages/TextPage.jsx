@@ -9,12 +9,11 @@ function TextPage({
     words
 }) {
     const [end, setEnd] = useState(false);
-    const [timeElapsed, setTimeElapsed] = useState(0);
-
     const [currentIndex, setCurrentIndex] = useState(0);
     const [displayWord, setDisplayWord] = useState(words[0]);
     const [intervalDuration, setIntervalDuration] = useState(500);
     const [paused, setPaused] = useState(false);
+    const [startTime, setStartTime] = useState(new Date().getTime());
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -22,7 +21,6 @@ function TextPage({
                 if (currentIndex < words.length - 1) {
                     setCurrentIndex(prevIndex => prevIndex + 1);
                     setDisplayWord(words[currentIndex + 1]);
-                    setTimeElapsed((prevTimeElapsed) => prevTimeElapsed + intervalDuration);
                 } else {
                     setEnd(true);
                     clearInterval(intervalId);
@@ -44,8 +42,8 @@ function TextPage({
         setCurrentIndex(0);
         setDisplayWord(words[0]);
         setIntervalDuration(500);
-        setTimeElapsed(0);
         setEnd(false);
+        setStartTime(new Date().getTime());
     }
 
     const handlePause = () => {
@@ -53,8 +51,8 @@ function TextPage({
     }
 
     if (end) {
-        let totalTime = timeElapsed;
-        totalTime = totalTime / 1000;
+        let endTime = new Date().getTime();
+        let totalTime = Math.round(((endTime - startTime) / 1000) * 100) / 100;
         return (
             <div className='container'>
                 <h2 className='h2'>you read {words.length} words in {totalTime} seconds!</h2>
