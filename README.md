@@ -9,7 +9,7 @@ by developing a tool that can make any piece of text quick and easy to read and 
 ## Using *Fastr*
 
 *Fastr* is a Chrome extension that uses rapid serial visual presentation (RSVP) to
-increase users' reading speed by over 200%. Basically that means that this extension
+increase users' reading speed by over 60%. Basically that means that this extension
 takes the user's highlighted text on any page and displays it one word at a time, 
 which optimizes reading speed by eliminating the need for users to move their eyes.
 Other features include:
